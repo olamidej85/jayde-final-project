@@ -6,16 +6,18 @@ import "./Weather.css";
 export default function weather() {
  const [ready, setReady] = useState(true);
 const [weatherData, setWeatherData] = useState({});
-function handleResponse(response) {
+function handleResponse(response){
+    setReady(true);
+    console.log(response.data);
+   
     setWeatherData({
-      ready: true,
-      temperature: response.data.main.temp,
-      humidity: response.data.main.humidity,
-      description: response.data.weather[0].description,
-      wind: response.data.wind.speed,
-      city: response.data.name,
+        temperature: response.data.temperature.current,
+        wind: response.data.wind.speed,
+        humidity: response.data.main.humidity,
+        date: "sarturday 10:50",
+        city: response.data.name
     });
-  }
+}
 if (ready){
     return (<div className="weather">
     <form>
@@ -31,7 +33,7 @@ if (ready){
     <h1> {weatherData.city}</h1>
     <ul>
         <li>{weatherData.date}</li>
-        <li>{weatherData.description}</li>
+        <li>cloudy</li>
     </ul>
     <div className="temp-unit text-center">
     <span className="temperature ">{Math.round(weatherData.temperature)}</span>
@@ -52,8 +54,8 @@ if (ready){
 </div>);
 
 } else {
-const apiKey = "8e4a0bf13d97t36283b48a970944023o";
-let city = "New york";
+    const apiKey = "af6881898c0658bf57fb18b55894e370";
+let city = "lagos";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(handleResponse);
 return "Loading.....";
