@@ -1,35 +1,35 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./Weather.css";
 
-
-export default function weather() {
- const [ready, setReady] = useState(false);
- const [city, setCity] = useState("lagos");
-const [weatherData, setWeatherData] = useState({   
+export default function Weather() {
+  const [ready, setReady] = useState(false);
+  const [city, setCity] = useState("lagos");
+  const [weatherData, setWeatherData] = useState({
     temperature: "--",
     humidity: "--",
     description: "--",
     wind: "--",
     city: "--"
-});
+  });
 
-function handleResponse(response){   
+  function handleResponse(response) {
     setWeatherData({
-        temperature: response.data.main.temp,
-        wind: response.data.wind.speed,
-        humidity: response.data.main.humidity,
-        city: response.data.name,
-        description:  response.data.weather[0].description,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      wind: response.data.wind.speed,
+      city: response.data.name,
     });
     setReady(true);
-}
+  }
 
-function search() {
+  function search() {
     const apiKey = "af6881898c0658bf57fb18b55894e370";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     setReady(false);
