@@ -46,21 +46,34 @@ function search() {
 
   return (
     <div className="weather">
-      <form onSubmit={handleSubmit}>
-        <div className="row">
-          <div className="col-9">
-            <input type="search" placeholder="Enter a city..." className="form-control" autoFocus="on" onChange={handleCityChange} />
-          </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary w-100" />
-          </div>
-        </div>
+      <div className="container">
+        <div className="weather-app">
+      <form
+      className="form-inline d-flex justify-content-center md-form form-sm"
+      onSubmit={handleSubmit}>
+        
+            <input type="search" 
+            placeholder="Enter a city..." 
+             className="form-control form-control-sm mr-3 w-75"  onChange={handleCityChange} />
+            <input type="submit"
+             value="Search" 
+             className="search-icon" />
       </form>
-      <h1>{weatherData.city}</h1>
-      <ul>
-        <li>{ready ? new Date().toLocaleString() : "--"}</li>
-        <li>{weatherData.description}</li>
-      </ul>
+      <hr />
+      <h1 className="city">{weatherData.city}</h1>
+      <div className="row text-center">
+        <div className="col-6">
+        <ul> 
+        <li className="info">{ready ? new Date().toLocaleString() : "--"}</li>
+        </ul>
+        </div>
+      
+        <div className="col-6">
+        <ul>
+        <li className="info">{weatherData.description}</li>
+        </ul>
+          </div> 
+      </div>
       <div className="temp-unit text-center">
         <span className="temperature">{ready ? Math.round(weatherData.temperature) : "--"}</span>
         <span className="unit">°C</span>
@@ -68,15 +81,17 @@ function search() {
       <div className="row text-center">
         <div className="col-6">
           <ul>
-            <li>Humidity: {weatherData.humidity}%</li>
+            <li className="info">Humidity: {weatherData.humidity}%</li>
           </ul>
         </div>
         <div className="col-6">
           <ul>
-            <li>Wind: {weatherData.wind} km/h</li>
+            <li className="info">Wind: {weatherData.wind} km/h</li>
           </ul>
         </div>
       </div>
+      </div>
+    </div>
     </div>
   );
 }

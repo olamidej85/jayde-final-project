@@ -1,47 +1,90 @@
 .weather{
-    border: 1px solid #000000;
-    border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(BG.jfif);
-    padding: 16px;
+    max-width: 500px;
+  
 
 }
-.weather form{
-    margin-bottom: 30px;
+.weather-app{
+    display: block;
+    margin: 0 auto;    
+    padding: 10px;
+    background-color:#F8F8F8;
+    border: 1px solid #dadde1;
+    border-radius: 5px;
 }
+.weather .city{
+ margin-left: 20px;
+}
+
+.weather form{
+    margin-bottom:20px ;
+}
+
+.weather .form-control{
+    border: transparent;
+    margin-bottom: 0em;
+    margin-right: 40px;
+    margin-top: 30px;
+    background-color: transparent;
+
+}
+.search-icon{
+    background-color: transparent;
+    font-size: 16px;
+    margin-bottom: 0em;
+    margin-left: 50px;
+    margin-top: 30px;
+    border: none;
+}
+hr {
+    background: #333;
+    height: 3px;
+    border-width: 0px;
+    max-width: 600px;
+    
+  }
 
 .weather h1{
-    color: white;
+    color: #333;
     font-size: 30px;
     font-weight: 100;
     line-height: 29px;
-   margin: 20px 0 0;
+   margin: 20px 0 4px;
+}
+.info{
+    margin:7px;
+    
 }
 .weather ul{
     padding: 0;
     margin: 0;
+
 }
 .weather li{
-    color: wheat;
+    color: #333;
     font-size: 16px;
     font-weight: 100;
     line-height: 16px;
     list-style: none;
+    margin-bottom: 3px;
 }
 
 .weather .temperature{
-    color: white;
+    color: #333;
     font-weight: bold;
     font-size: 70px;
     
 }
 
 .weather .unit{
-    color: white;
+    color: #333;
     font-size: 18px;
     font-weight: 400;
     position: relative;
     top: -34px;
     line-height: 1;
-    
+
+}
+footer{
+    text-align: center;
 }
