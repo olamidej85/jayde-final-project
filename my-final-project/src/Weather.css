@@ -22,7 +22,6 @@
 
 .weather .form-control{
     border: transparent;
-    margin-bottom: 0em;
     margin-right: 40px;
     margin-top: 30px;
     background-color: transparent;
@@ -37,7 +36,7 @@
     border: none;
 }
 hr {
-    background: #333;
+    background: black;
     height: 3px;
     border-width: 0px;
     max-width: 600px;
