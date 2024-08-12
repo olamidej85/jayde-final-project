@@ -23,7 +23,7 @@
 .weather .form-control{
     border: transparent;
     margin-right: 40px;
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: transparent;
 
 }
@@ -32,8 +32,8 @@
     background-color: transparent;
     font-size: 16px;
     margin-bottom: 0em;
-    margin-left: 50px;
-    margin-top: 30px;
+    margin-left: 30px;
+    margin-top: 40px;
     border: none;
 }
 hr {
