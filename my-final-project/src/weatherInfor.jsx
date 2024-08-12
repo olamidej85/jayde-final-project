@@ -1,5 +1,6 @@
 import React from "react";
 import "./weatherInfor.css";
+import WeatherTemperature from "./weatherTemperatre";
 
 
 export default function WeatherInfor(props) {
@@ -50,10 +51,7 @@ export default function WeatherInfor(props) {
         </ul>
           </div> 
       </div>
-      <div className="temp-unit text-center">
-        <span className="temperature">{ Math.round(props.data.temperature) }</span>
-        <span className="unit">°C</span>
-      </div>
+      <WeatherTemperature celsius={props.data.temperature} />
       <div className="row text-center">
         <div className="col-6">
           <ul>
