@@ -55,15 +55,16 @@ export default function WeatherInfor(props) {
       <div className="row text-center">
         <div className="col-6">
           <ul>
-            <li className="info">Humidity: {props.data.humidity}%</li>
+            <li className="info mt-4">Humidity: {props.data.humidity}%</li>
           </ul>
         </div>
         <div className="col-6">
           <ul>
-            <li className="info">Wind: {props.data.wind} km/h</li>
+            <li className="info mt-4">Wind: {props.data.wind} km/h</li>
           </ul>
         </div>
       </div>
     </div>
   );
 }
+
