@@ -67,4 +67,3 @@ export default function WeatherInfor(props) {
     </div>
   );
 }
-
