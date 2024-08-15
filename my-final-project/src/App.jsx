@@ -6,7 +6,7 @@ export default function App() {
   return <div className="App"> 
   <div className="container">
   
-  <Weather defaultCity="lagos" />
+  <Weather defaultCity="lagos" /> 
   <footer> 
     This project was coded by Jayde and is {""}
     <a href="https://github.com/olamidej85/jayde-final-project" target="_blank">
